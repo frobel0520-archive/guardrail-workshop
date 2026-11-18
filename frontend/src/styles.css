@@ -172,7 +172,7 @@ a:focus-visible {
   padding: 18px 0 24px;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
-  font: 9px var(--mono);
+  font: 11px var(--mono);
   letter-spacing: 0.08em;
 }
 
@@ -195,7 +195,7 @@ a:focus-visible {
 .nav-group-label {
   margin: 30px 0 9px;
   color: var(--muted);
-  font: 8px var(--mono);
+  font: 11px var(--mono);
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -238,7 +238,7 @@ a:focus-visible {
   width: 19px;
   flex: none;
   color: var(--teal-dark);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
 }
 
 .main-area {
@@ -267,7 +267,7 @@ a:focus-visible {
   display: flex;
   gap: 10px;
   color: var(--muted);
-  font: 9px var(--mono);
+  font: 11px var(--mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -326,7 +326,7 @@ a:focus-visible {
   gap: 8px 22px;
   align-items: center;
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   letter-spacing: 0.06em;
 }
 
@@ -343,7 +343,7 @@ a:focus-visible {
   background: transparent;
   border: 0;
   border-right: 1px solid var(--line);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   transition: background 0.16s ease, color 0.16s ease;
 }
 
@@ -395,7 +395,7 @@ a:focus-visible {
 .kicker {
   margin: 0;
   color: var(--teal-dark);
-  font: 500 9px var(--mono);
+  font: 500 11px var(--mono);
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -565,7 +565,7 @@ h3.block-title {
   display: flex;
   gap: 0;
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   margin-bottom: 8px;
 }
 
@@ -661,7 +661,7 @@ h3.block-title {
 
 .bar-value {
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   white-space: nowrap;
 }
 
@@ -770,7 +770,7 @@ h3.block-title {
 .panel h4 {
   margin: 0 0 14px;
   color: var(--teal-dark);
-  font: 500 9px var(--mono);
+  font: 500 11px var(--mono);
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -839,7 +839,7 @@ textarea.input:focus,
 
 .toggle-meta {
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
 }
 
 .btn {
@@ -938,7 +938,7 @@ textarea.input:focus,
   padding: 1px 7px;
   color: var(--teal-dark);
   background: var(--surface);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   vertical-align: 1px;
 }
 
@@ -1041,7 +1041,7 @@ textarea.input:focus,
   flex-wrap: wrap;
   margin-top: 16px;
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
 }
 
 .metrics b {
@@ -1074,7 +1074,7 @@ textarea.input:focus,
 
 .stat .k {
   color: var(--muted);
-  font: 10px var(--mono);
+  font: 11px var(--mono);
   letter-spacing: 0.06em;
 }
 
@@ -1088,7 +1088,7 @@ table.events th {
   padding: 8px 10px;
   text-align: left;
   color: var(--teal-dark);
-  font: 500 9px var(--mono);
+  font: 500 11px var(--mono);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--ink);
@@ -1185,8 +1185,11 @@ table.events td.excerpt {
     background: rgba(26, 26, 24, 0.4);
   }
 
+  /* 手機維持固定頂列，長頁往下捲後仍能點漢堡選單；z-index 低於 .menu-scrim（15）與 .sidebar（20） */
   .topbar {
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index: 14;
     padding: 10px 18px;
   }
 
@@ -1215,7 +1218,7 @@ table.events td.excerpt {
   }
 
   .page-title {
-    font-size: 40px;
+    font-size: clamp(28px, 7.5vw, 36px);
   }
 
   .bar-row {
