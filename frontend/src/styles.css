@@ -179,6 +179,7 @@ a:focus-visible {
 .atlas-link {
   display: inline-flex;
   align-items: center;
+  min-height: 38px;
   gap: 5px;
   margin-top: 16px;
   color: var(--teal-dark);
@@ -337,7 +338,7 @@ a:focus-visible {
 }
 
 .pill-btn {
-  min-height: 32px;
+  min-height: 38px;
   padding: 0 12px;
   color: var(--muted);
   background: transparent;
@@ -805,6 +806,9 @@ textarea.input:focus,
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   padding: 4px 12px;
   color: var(--muted);
   background: transparent;
